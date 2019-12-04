@@ -6,7 +6,7 @@
 /*   By: gboucett <gboucett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 14:52:31 by gboucett          #+#    #+#             */
-/*   Updated: 2019/12/02 20:11:24 by gboucett         ###   ########.fr       */
+/*   Updated: 2019/12/04 15:13:15 by gboucett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,8 @@
 #include <unistd.h>
 #include <stdio.h>
 
-typedef struct			s_buffer
-{
-	char				buf[BUFFER_SIZE];
-	int					pos;
-	// int					fd;
-	// struct s_buffer		*next;
-}						t_buffer;
-
-void	ft_init_buffer(t_buffer **buffer);
+void	*ft_memmove(void *dst, const void *src, size_t len);
+char	*ft_strjoin(const char *s1, const char *s2);
 int		get_next_line(int fd, char **line);
 
 #endif
