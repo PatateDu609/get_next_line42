@@ -6,7 +6,7 @@
 /*   By: gboucett <gboucett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 14:52:29 by gboucett          #+#    #+#             */
-/*   Updated: 2019/12/04 15:27:01 by gboucett         ###   ########.fr       */
+/*   Updated: 2019/12/05 11:25:42 by gboucett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,20 @@ static size_t	ft_strlen(const char *str)
 	while (str[len] && str[len] != '\n')
 		len++;
 	return (len);
+}
+
+char	*ft_strdup(const char *s1)
+{
+	char	*result;
+	size_t	i;
+
+	if (!(result = (char *)malloc(sizeof(char) * (ft_strlen(s1) + 1))))
+		return (NULL);
+	i = 0;
+	while (i++ < ft_strlen(s1))
+		result[i - 1] = s1[i - 1];
+	result[i - 1] = 0;
+	return (result);
 }
 
 char	*ft_strjoin(const char *s1, const char *s2)
