@@ -6,7 +6,7 @@
 /*   By: gboucett <gboucett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 14:52:31 by gboucett          #+#    #+#             */
-/*   Updated: 2019/12/05 10:50:48 by gboucett         ###   ########.fr       */
+/*   Updated: 2019/12/09 22:14:05 by gboucett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 char	*ft_strdup(const char *s1);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 char	*ft_strjoin(const char *s1, const char *s2);
+int		ft_strchr(char *buffer, char chr);
 int		get_next_line(int fd, char **line);
 
 #endif

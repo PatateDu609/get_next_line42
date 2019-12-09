@@ -6,7 +6,7 @@
 /*   By: gboucett <gboucett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 14:52:29 by gboucett          #+#    #+#             */
-/*   Updated: 2019/12/05 11:25:42 by gboucett         ###   ########.fr       */
+/*   Updated: 2019/12/09 23:34:05 by gboucett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,4 +76,14 @@ char	*ft_strjoin(const char *s1, const char *s2)
 			*s++ = *s2++;
 	*s = 0;
 	return (result);
+}
+
+int		ft_strchr(char *buffer, char chr)
+{
+	int		pos;
+
+	pos = 0;
+	while (buffer[pos] && buffer[pos] != chr)
+		pos++;
+	return (buffer[pos] == chr ? pos + 1 : -1);
 }
