@@ -6,13 +6,13 @@
 /*   By: gboucett <gboucett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 14:52:24 by gboucett          #+#    #+#             */
-/*   Updated: 2019/12/10 00:28:44 by gboucett         ###   ########.fr       */
+/*   Updated: 2019/12/10 00:34:34 by gboucett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-int				ft_read(int fd, char *buffer, char **line)
+static int		ft_read(int fd, char *buffer, char **line)
 {
 	char	*tmp;
 	int		chr_read;
@@ -39,6 +39,8 @@ int				get_next_line(int fd, char **line)
 	static char		buffer[100][BUFFER_SIZE + 1];
 	int				pos;
 
+	if (BUFFER_SIZE <= 0)
+		return (-1);
 	*line = buffer[fd][0] ? ft_strdup(buffer[fd]) : ft_strdup("");
 	if (!*line)
 		return (-1);
