@@ -6,7 +6,7 @@
 /*   By: gboucett <gboucett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 14:52:24 by gboucett          #+#    #+#             */
-/*   Updated: 2019/12/10 12:16:56 by gboucett         ###   ########.fr       */
+/*   Updated: 2019/12/11 13:51:43 by gboucett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static int		ft_read(int fd, char *buffer, char **line)
 			break ;
 		}
 	}
-	return (chr_read == 0 || chr_read <= -1 ? chr_read : 1);
+	return (chr_read == 0 || chr_read == -1 ? chr_read : 1);
 }
 
 int				get_next_line(int fd, char **line)
